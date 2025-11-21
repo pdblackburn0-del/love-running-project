@@ -84,7 +84,7 @@ body {
 
 header{
     background-color: #FFFFFF;
-    padding:0 1 rem;
+    padding: 0 1 rem;
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -92,9 +92,10 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: baseline;
+    font-family: "Oswald", sans-serif;
 
 }
-header {
+header a{
     text-decoration: none;
     color: inherit;
 
@@ -128,20 +129,54 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    top: 100%;
 
 }
 /*Nav Toggle*/
 #nav-toggle:checked~nav {
     display: block;
 }
+#nav-toggle {
+    display: none;
+}
+.nav-toggle-label {
+    font-size: 2rem;
+
+}
 
 main{ 
     background-color: lightblue;
     /* This makes the main content area flexible and allows it to grow and fill available space */
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 
 
 footer{
     background-color: orange;
+}
+/*Media Queries*/
+@media screen and (min-width: 768px) {
+  /*Header*/
+    nav {
+        
+      display:block;
+      position:relative;
+      box-shadow:none;
+      width:fit-content;
+      padding-right: 1rem;
+
+    }
+    #menu {
+        display: flex;
+        gap: 2rem;
+    }
+    #menu > li {
+      display: block;
+        margin-bottom: 0;
+        padding-left: 1rem;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
 }
