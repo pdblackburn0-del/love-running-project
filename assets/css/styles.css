@@ -167,6 +167,7 @@ footer{
       padding-right: 1rem;
 
     }
+
     #menu {
         display: flex;
         gap: 2rem;
@@ -191,3 +192,8 @@ main {
   /*Push content below fixed header*/
     margin-top: 79px;
 }
+/*Large devices (laptop and desktops 992px and up)*/
+@media screen and (min-width: 992px) {
+  #menu a:hover {
+    border-bottom: 1px solid #3a3a3a; 
+  }
