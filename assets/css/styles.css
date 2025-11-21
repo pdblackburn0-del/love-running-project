@@ -152,9 +152,25 @@ main{
 }
 
 
-footer{
-    background-color: orange;
+
+
+/*Footer styles*/
+#social-networks {
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
 }
+  #social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color:#3a3a3a
+
+
+  }
+
+
 /*Media Queries*/
 @media screen and (min-width: 768px) {
   /*Header*/
