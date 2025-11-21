@@ -145,14 +145,19 @@ nav {
 }
 
 main{ 
-    background-color: lightblue;
     /* This makes the main content area flexible and allows it to grow and fill available space */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
+/* Hero section styles */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url(../images/hero-image.webp) no-repeat center center/cover;
 
 
+}
 
 /*Footer styles*/
 #social-networks {
@@ -208,8 +213,7 @@ main {
   /*Push content below fixed header*/
     margin-top: 79px;
 }
-/*Large devices (laptop and desktops 992px and up)*/
-@media screen and (min-width: 992px) 
+
 /*Large devices (laptop and desktops 992px and up)*/
 @media screen and (min-width: 992px) {
   #menu a:hover {
