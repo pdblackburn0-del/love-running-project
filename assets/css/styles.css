@@ -244,8 +244,12 @@ hr {
 /*Gallery page*/
 #photos img {
   width: 100%;
-  
+  line-height: 1em;
+
 }
+#photos {
+ line-height: 0;
+
 
 /*Footer styles*/
 #social-networks {
@@ -263,37 +267,57 @@ hr {
 
   }
 
+}
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
 
-/*Media Queries*/
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-  /*Header*/
-    nav {
-        
-      display:block;
-      position:relative;
-      box-shadow:none;
-      width:fit-content;
-      padding-right: 1rem;
 
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
     }
 
     #menu {
         display: flex;
-        gap: 2rem;
     }
-    #menu > li {
-      display: block;
-        margin-bottom: 0;
+
+    #menu>li {
         padding-left: 1rem;
     }
+
     .nav-toggle-label {
         display: none;
     }
-    #cover-text {
-      width: 300px;
-      right: 30px;
 
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
     }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+
     /* Reasons section */
     #benefits-physical,
     #benefits-mental {
@@ -310,25 +334,26 @@ hr {
     #benefits-mental>div {
         text-align: end;
         align-self: flex-end;
-}
-#logo {
-    font-size: 280%;
-    line-height: 75px;
-    margin: 0 0.5rem;
+    }
 
-}
-/*Main content styles*/
-main {
-  /*Push content below fixed header*/
-    margin-top: 79px;
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
-/*Large devices (laptop and desktops 992px and up)*/
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-  #menu a:hover {
-    border-bottom: 1px solid #3a3a3a; 
-  }
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
+    }
 }
+
 @media screen and (min-width: 1200px) {    
     /* Reasons section */
     #benefits {
